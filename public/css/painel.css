@@ -103,10 +103,10 @@ body {
     transition: color .3s;
 }
 
-#featured-subtitle {
+.featured-subtitle {
     font-family: var(--font-ui);
-    font-size: 5vh;
-    font-weight: 300;
+    font-size: 5vh !important;
+    font-weight: 400;
     letter-spacing: .15em;
     color: #000000;
     margin-top: .75rem;

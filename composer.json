@@ -27,6 +27,14 @@
         {
             "type": "vcs",
             "url": "https://github.com/Coordenacao-Sistema-DTI-FME/core-sga.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/Coordenacao-Sistema-DTI-FME/panel-bundle-sga.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/Coordenacao-Sistema-DTI-FME/panel-app-sga.git"
         }
     ],
     "require": {

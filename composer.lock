@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "45c094674de0081643b145573dc53aa4",
+    "content-hash": "ad04f376c18ed5081960c6a85afb219f",
     "packages": [
         {
             "name": "defuse/php-encryption",
@@ -2126,12 +2126,12 @@
             "version": "v2.4.x-dev",
             "source": {
                 "type": "git",
-                "url": "https://github.com/novosga/panel-bundle.git",
+                "url": "https://github.com/Coordenacao-Sistema-DTI-FME/panel-bundle-sga.git",
                 "reference": "df38ddf79042ac12c66930c4f8fe522e134ab166"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/novosga/panel-bundle/zipball/df38ddf79042ac12c66930c4f8fe522e134ab166",
+                "url": "https://api.github.com/repos/Coordenacao-Sistema-DTI-FME/panel-bundle-sga/zipball/df38ddf79042ac12c66930c4f8fe522e134ab166",
                 "reference": "df38ddf79042ac12c66930c4f8fe522e134ab166",
                 "shasum": ""
             },
@@ -2152,6 +2152,7 @@
                 "slevomat/coding-standard": "^8.28",
                 "squizlabs/php_codesniffer": "^4.0"
             },
+            "default-branch": true,
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -2163,13 +2164,16 @@
                     "Novosga\\PanelBundle\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Novosga\\PanelBundle\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "MIT"
             ],
             "support": {
-                "issues": "https://github.com/novosga/panel-bundle/issues",
-                "source": "https://github.com/novosga/panel-bundle/tree/v2.4"
+                "source": "https://github.com/Coordenacao-Sistema-DTI-FME/panel-bundle-sga/tree/v2.4"
             },
             "time": "2026-08-21T14:08:20+00:00"
         },
