@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5d072e0dd3eb134d8615f2a33f4eb95d",
+    "content-hash": "45c094674de0081643b145573dc53aa4",
     "packages": [
         {
             "name": "defuse/php-encryption",
@@ -1912,13 +1912,13 @@
             "version": "v2.4.x-dev",
             "source": {
                 "type": "git",
-                "url": "https://github.com/novosga/attendance-bundle.git",
-                "reference": "229b54f743f186f26f3af4d6572064e758d804e3"
+                "url": "https://github.com/Coordenacao-Sistema-DTI-FME/attendance-bundle-sga.git",
+                "reference": "05e0f556b1bc37eb5589df1a88b5fa5f4f93aeab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/novosga/attendance-bundle/zipball/229b54f743f186f26f3af4d6572064e758d804e3",
-                "reference": "229b54f743f186f26f3af4d6572064e758d804e3",
+                "url": "https://api.github.com/repos/Coordenacao-Sistema-DTI-FME/attendance-bundle-sga/zipball/05e0f556b1bc37eb5589df1a88b5fa5f4f93aeab",
+                "reference": "05e0f556b1bc37eb5589df1a88b5fa5f4f93aeab",
                 "shasum": ""
             },
             "require": {
@@ -1936,6 +1936,7 @@
                 "slevomat/coding-standard": "^8.28",
                 "squizlabs/php_codesniffer": "^4.0"
             },
+            "default-branch": true,
             "type": "symfony-module",
             "extra": {
                 "branch-alias": {
@@ -1947,28 +1948,31 @@
                     "Novosga\\AttendanceBundle\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Novosga\\AttendanceBundle\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "MIT"
             ],
             "support": {
-                "issues": "https://github.com/novosga/attendance-bundle/issues",
-                "source": "https://github.com/novosga/attendance-bundle/tree/v2.4"
+                "source": "https://github.com/Coordenacao-Sistema-DTI-FME/attendance-bundle-sga/tree/v2.4"
             },
-            "time": "2026-08-21T14:07:49+00:00"
+            "time": "2026-09-30T14:17:18+00:00"
         },
         {
             "name": "novosga/core",
             "version": "v2.4.x-dev",
             "source": {
                 "type": "git",
-                "url": "https://github.com/novosga/core.git",
-                "reference": "c24c2e5c1432be4dded1da2b1d7b7051adfcdf82"
+                "url": "https://github.com/Coordenacao-Sistema-DTI-FME/core-sga.git",
+                "reference": "b9a37b800887d936bbe70320d467bd248d71e4c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/novosga/core/zipball/c24c2e5c1432be4dded1da2b1d7b7051adfcdf82",
-                "reference": "c24c2e5c1432be4dded1da2b1d7b7051adfcdf82",
+                "url": "https://api.github.com/repos/Coordenacao-Sistema-DTI-FME/core-sga/zipball/b9a37b800887d936bbe70320d467bd248d71e4c5",
+                "reference": "b9a37b800887d936bbe70320d467bd248d71e4c5",
                 "shasum": ""
             },
             "require": {
@@ -1987,6 +1991,7 @@
                 "slevomat/coding-standard": "^8.28",
                 "squizlabs/php_codesniffer": "^4.0"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1998,15 +2003,18 @@
                     "Novosga\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Novosga\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "MIT"
             ],
             "support": {
-                "issues": "https://github.com/novosga/core/issues",
-                "source": "https://github.com/novosga/core/tree/v2.4"
+                "source": "https://github.com/Coordenacao-Sistema-DTI-FME/core-sga/tree/v2.4"
             },
-            "time": "2026-08-21T14:07:45+00:00"
+            "time": "2026-09-30T14:51:36+00:00"
         },
         {
             "name": "novosga/customers-bundle",
@@ -2064,13 +2072,13 @@
             "version": "v2.4.x-dev",
             "source": {
                 "type": "git",
-                "url": "https://github.com/pedroconhasca09/monitor-bundle-sga.git",
-                "reference": "3fd9875b9fd8682d6b9429395f57b551cb16bdbc"
+                "url": "https://github.com/Coordenacao-Sistema-DTI-FME/monitor-bundle-sga.git",
+                "reference": "d992bc07bc91d5f49407f294afbb5d9b2616f799"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pedroconhasca09/monitor-bundle-sga/zipball/3fd9875b9fd8682d6b9429395f57b551cb16bdbc",
-                "reference": "3fd9875b9fd8682d6b9429395f57b551cb16bdbc",
+                "url": "https://api.github.com/repos/Coordenacao-Sistema-DTI-FME/monitor-bundle-sga/zipball/d992bc07bc91d5f49407f294afbb5d9b2616f799",
+                "reference": "d992bc07bc91d5f49407f294afbb5d9b2616f799",
                 "shasum": ""
             },
             "require": {
@@ -2109,9 +2117,9 @@
                 "MIT"
             ],
             "support": {
-                "source": "https://github.com/pedroconhasca09/monitor-bundle-sga/tree/v2.4"
+                "source": "https://github.com/Coordenacao-Sistema-DTI-FME/monitor-bundle-sga/tree/v2.4"
             },
-            "time": "2026-09-23T17:19:33+00:00"
+            "time": "2026-09-29T18:22:21+00:00"
         },
         {
             "name": "novosga/panel-bundle",

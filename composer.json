@@ -19,6 +19,14 @@
         {
             "type": "vcs",
             "url": "https://github.com/pedroconhasca09/monitor-bundle-sga.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/Coordenacao-Sistema-DTI-FME/attendance-bundle-sga.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/Coordenacao-Sistema-DTI-FME/core-sga.git"
         }
     ],
     "require": {

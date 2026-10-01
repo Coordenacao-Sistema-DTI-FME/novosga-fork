@@ -1,0 +1,20 @@
+Verificar PHP
+Abra o php.ini
+Deixe -> extension=sodium
+
+php -m | grep sodium
+
+Puxar mudanças do bundle desejado
+Git push no bundle que está sendo feita alteração
+
+Dentro do fork geral
+Adicionar novo repositório no composer.json
+
+composer update novosga/core
+docker compose build
+docker compose up -d
+
+
+Rodar App local
+docker compose build app
+docker compose up -d app
