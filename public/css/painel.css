@@ -40,17 +40,18 @@ body {
 
 #video-player {
     position: absolute;
-    top: 40%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    width: 80%;
-    max-width: 1200px;
+    width: 90%;
+    max-width: 1350px;
     aspect-ratio: 16 / 9;
 
     overflow: hidden;
     background: #000;
-    border-radius: 1.2rem;
+    border-radius: 1.1rem;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, .05);
 }
 
 #video-player iframe {
@@ -64,6 +65,11 @@ body {
 #painel {
     display: flex;
     height: 100vh;
+
+    background-image: url('/images/fundo-painel.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 /* ── Featured (main area) ──────────────────────────────────── */
@@ -75,7 +81,7 @@ body {
     justify-content: center;
     position: relative;
     overflow: hidden;
-    background: var(--bg-featured);
+
 }
 
 /* Scan-line flash on new ticket */
@@ -105,7 +111,7 @@ body {
     display: flex;
     flex-direction: column;
 
-    background:
+    /* background:
         radial-gradient(
             circle at 50% 0%,
             rgba(255, 255, 255, 0.18),
@@ -116,7 +122,7 @@ body {
             #FFB15C 0%,
             #EF7D1A 45%,
             #C85A08 100%
-        );
+        ); */
 
     overflow: hidden;
 }
@@ -198,22 +204,23 @@ body {
 .featured-subtitle {
     font-family: var(--font-ui);
 
-    font-size: 3vh !important;
+    font-size: 4.6vh !important;
     font-weight: 500;
 
     letter-spacing: .18em;
     text-transform: uppercase;
+    text-shadow: 0 4px 0 rgba(0, 0, 0, .05);
 
     color: #111;
 
-    margin-top: 1rem;
+    margin-top: .85rem;
 }
 
 /* Prioridade */
 #featured-description {
     font-family: var(--font-mono);
 
-    font-size: 1.6vh;
+    font-size: 2.3vh;
 
     letter-spacing: .25em;
     text-transform: uppercase;
@@ -223,6 +230,7 @@ body {
     margin-top: .7rem;
 
     min-height: 1.2em;
+    text-shadow: 0 4px 0 rgba(0, 0, 0, .05);
 }
 
 /* Estado vazio */
@@ -243,25 +251,21 @@ body {
 #clock-box {
     display: flex;
     flex-direction: column;
-
     justify-content: center;
     align-items: center;
-
-    min-height: 12vh;
-
+    min-height: 15vh;
     padding: 1rem;
-
     text-align: center;
-
     background: rgba(0, 0, 0, .12);
-
+    background-color: var(--bg-footer);
     border-top: 1px solid rgba(255, 255, 255, .15);
+    z-index: 1000;
 }
 
 #clock-time {
     font-family: var(--font-display);
 
-    font-size: 3vh;
+    font-size: 3.3vh;
 
     letter-spacing: .08em;
 
@@ -273,7 +277,7 @@ body {
 #clock-date {
     font-family: var(--font-mono);
 
-    font-size: 1vh;
+    font-size: 1.6vh;
 
     letter-spacing: .18em;
 
@@ -292,7 +296,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 12vh;
+    height: 15vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
