@@ -187,7 +187,7 @@ body {
     height: 10vh;
     padding: 1.25rem 1rem;
     text-align: center;
-    background: var(--bg-clock);
+    background: #44A075;
 }
 
 #clock-time {
