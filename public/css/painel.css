@@ -27,7 +27,7 @@
     --bg-footer:        #F1F1F1;
     --bg-history-item:  #d2ffea;
 
-    --bg-clock:         var(--bg-panel);
+    --bg-clock:         #44A075;
 }
 
 body {
@@ -228,7 +228,6 @@ body {
     overflow-y: auto;
     padding: 1.5rem 1rem;
     scrollbar-width: none;
-    background: var(--bg-history);
     display: flex;
     align-items: center;
     gap: 1rem;
