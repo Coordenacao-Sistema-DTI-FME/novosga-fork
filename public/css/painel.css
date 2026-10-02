@@ -50,6 +50,7 @@ body {
 
     overflow: hidden;
     background: #000;
+    border-radius: 1.2rem;
 }
 
 #video-player iframe {
@@ -168,14 +169,14 @@ body {
 /* "SENHA CHAMADA" */
 #featured-label {
     font-family: var(--font-mono);
-    font-size: 2.2vh;
+    font-size: 3.1vh;
 
-    letter-spacing: .35em;
+    letter-spacing: .30em;
     text-transform: uppercase;
 
     color: #344054;
 
-    margin-bottom: .5rem;
+    margin-bottom: .75rem;
 }
 
 /* Número da senha */

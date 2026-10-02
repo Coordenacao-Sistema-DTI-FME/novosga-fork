@@ -3,29 +3,61 @@
 
     console.log('painel-voz.js carregado');
 
+    let vozes = [];
+
+    function carregarVozes() {
+        vozes = window.speechSynthesis.getVoices();
+
+        console.log(
+            '[painel-voz] Vozes disponíveis:',
+            vozes.map(v => `${v.name} (${v.lang})`)
+        );
+    }
+
+    carregarVozes();
+
+    if (
+        typeof window.speechSynthesis !== 'undefined' &&
+        window.speechSynthesis.onvoiceschanged !== undefined
+    ) {
+        window.speechSynthesis.onvoiceschanged = carregarVozes;
+    }
+
     window.PainelVoz = {
 
         falarChamada(chamada) {
-            if (!chamada) {
+            if (!chamada || !chamada.senha) {
                 return;
             }
 
-            const senha = chamada.senha || '';
-
-            if (!senha) {
-                return;
+            // Garante que as vozes já estejam carregadas
+            if (!vozes.length) {
+                vozes = window.speechSynthesis.getVoices();
             }
 
+            const senha = chamada.senha;
             const local = chamada.local || '';
             const numeroLocal = chamada.numeroLocal || '';
 
+            const texto = `Senha ${senha}, dirigir-se ao ${local} ${numeroLocal}`;
+
             console.log('[painel-voz] Falando:', {
-                senha: senha,
-                local: local,
-                numeroLocal: numeroLocal,
+                senha,
+                local,
+                numeroLocal
             });
 
-            const texto = `Senha ${senha}, dirigir-se ao ${local} ${numeroLocal}`;
+            // Procura EXATAMENTE a Microsoft Daniel
+            const vozDaniel = vozes.find(voz =>
+                voz.name === 'Microsoft Daniel - Portuguese (Brazil)'
+            );
+
+            console.log(
+                '[painel-voz] Voz selecionada:',
+                vozDaniel
+                    ? `${vozDaniel.name} (${vozDaniel.lang})`
+                    : 'DANIEL NÃO ENCONTRADO'
+            );
 
             const utterance = new SpeechSynthesisUtterance(texto);
 
@@ -34,21 +66,15 @@
             utterance.pitch = 1;
             utterance.volume = 1;
 
-            const vozes = window.speechSynthesis.getVoices();
-
-            const vozDaniel = vozes.find(
-                voz => voz.name.includes('Daniel') && voz.lang === 'pt-BR'
-            );
-
             if (vozDaniel) {
                 utterance.voice = vozDaniel;
-                console.log('[painel-voz] Usando voz:', vozDaniel.name);
-            } else {
-                console.warn('[painel-voz] Voz Daniel não encontrada');
             }
 
             window.speechSynthesis.cancel();
-            window.speechSynthesis.speak(utterance);
-        },
+
+            setTimeout(() => {
+                window.speechSynthesis.speak(utterance);
+            }, 100);
+        }
     };
 })();
