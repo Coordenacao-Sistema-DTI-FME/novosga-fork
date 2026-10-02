@@ -16,18 +16,17 @@
 
     carregarVozes();
 
-    if (typeof window.speechSynthesis !== 'undefined' && window.speechSynthesis.onvoiceschanged !== undefined) {
-        window.speechSynthesis.onvoiceschanged = carregarVozes;
-    }
+        if (typeof window.speechSynthesis !== 'undefined' && window.speechSynthesis.onvoiceschanged !== undefined) {
+            window.speechSynthesis.onvoiceschanged = carregarVozes;
+        }
 
-    window.PainelVoz = {
+        window.PainelVoz = {
 
-        falarChamada(chamada) {
+            falarChamada(chamada) {
             if (!chamada || !chamada.senha) {
                 return;
             }
 
-            // Tenta recarregar as vozes caso o array esteja vazio
             if (!vozes || vozes.length === 0) {
                 vozes = window.speechSynthesis.getVoices();
             }
@@ -36,13 +35,39 @@
             const local = chamada.local || '';
             const numeroLocal = chamada.numeroLocal || '';
 
+            const texto = `Senha ${senha}, dirigir-se ao ${local} ${numeroLocal}`;
+
             console.log('[painel-voz] Falando:', {
-                senha: senha,
-                local: local,
-                numeroLocal: numeroLocal,
+                senha,
+                local,
+                numeroLocal,
             });
 
-            const texto = `Senha ${senha}, dirigir-se ao ${local} ${numeroLocal}`;
+            // Procura especificamente o Rudolph
+            let vozSelecionada = vozes.find(
+                voz => voz.name.toLowerCase().includes('rudolph')
+            );
+
+            // Se não encontrar, tenta Maria
+            if (!vozSelecionada) {
+                vozSelecionada = vozes.find(
+                    voz => voz.name.toLowerCase().includes('maria')
+                );
+            }
+
+            // Se ainda não encontrar, tenta Daniel
+            if (!vozSelecionada) {
+                vozSelecionada = vozes.find(
+                    voz => voz.name.toLowerCase().includes('daniel')
+                );
+            }
+
+            console.log(
+                '[painel-voz] Voz escolhida:',
+                vozSelecionada
+                    ? `${vozSelecionada.name} (${vozSelecionada.lang})`
+                    : 'PADRÃO DO SISTEMA'
+            );
 
             const utterance = new SpeechSynthesisUtterance(texto);
 
@@ -51,31 +76,16 @@
             utterance.pitch = 1;
             utterance.volume = 1;
 
-            // Busca priorizando o Rudolph
-            const vozSelecionada = vozes.find(voz => {
-                const nome = voz.name.toLowerCase();
-                const lang = voz.lang.replace('_', '-').toLowerCase();
-
-                const ePtBr = lang.includes('pt-br') || lang.includes('pt');
-
-                return ePtBr && (
-                    nome.includes('rudolph') ||
-                    nome.includes('francisca') ||
-                    nome.includes('daniel') ||
-                    nome.includes('maria') ||
-                    nome.includes('female')
-                );
-            });
-
             if (vozSelecionada) {
                 utterance.voice = vozSelecionada;
-                console.log('[painel-voz] Voz selecionada:', vozSelecionada.name);
-            } else {
-                console.warn('[painel-voz] Nenhuma voz específica encontrada. Usando padrão do sistema.');
             }
 
+            // Pequeno atraso para evitar conflito com cancelamento/falas anteriores
             window.speechSynthesis.cancel();
-            window.speechSynthesis.speak(utterance);
+
+            setTimeout(() => {
+                window.speechSynthesis.speak(utterance);
+            }, 100);
         },
     };
 })();
