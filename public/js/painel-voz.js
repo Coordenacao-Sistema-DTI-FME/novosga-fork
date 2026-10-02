@@ -53,7 +53,7 @@
             const vozFeminina = vozes.find(voz =>
                 voz.lang === 'pt-BR' &&
                 (
-                    voz.name.toLowerCase().includes('maria') ||
+                    voz.name.toLowerCase().includes('rudolph') ||
                     voz.name.toLowerCase().includes('francisca') ||
                     voz.name.toLowerCase().includes('female') ||
                     voz.name.toLowerCase().includes('feminina')
