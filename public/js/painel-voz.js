@@ -16,21 +16,23 @@
 
     carregarVozes();
 
-    window.speechSynthesis.onvoiceschanged = carregarVozes;
+    if (typeof window.speechSynthesis !== 'undefined' && window.speechSynthesis.onvoiceschanged !== undefined) {
+        window.speechSynthesis.onvoiceschanged = carregarVozes;
+    }
 
     window.PainelVoz = {
 
         falarChamada(chamada) {
-            if (!chamada) {
+            if (!chamada || !chamada.senha) {
                 return;
+            }
+
+            // Tenta recarregar as vozes caso o array esteja vazio
+            if (!vozes || vozes.length === 0) {
+                vozes = window.speechSynthesis.getVoices();
             }
 
             const senha = chamada.senha || '';
-
-            if (!senha) {
-                return;
-            }
-
             const local = chamada.local || '';
             const numeroLocal = chamada.numeroLocal || '';
 
@@ -49,22 +51,27 @@
             utterance.pitch = 1;
             utterance.volume = 1;
 
-            // Procura uma voz feminina em português do Brasil
-            const vozFeminina = vozes.find(voz =>
-                voz.lang === 'pt-BR' &&
-                (
-                    voz.name.toLowerCase().includes('rudolph') ||
-                    voz.name.toLowerCase().includes('francisca') ||
-                    voz.name.toLowerCase().includes('female') ||
-                    voz.name.toLowerCase().includes('feminina')
-                )
-            );
+            // Busca priorizando o Rudolph
+            const vozSelecionada = vozes.find(voz => {
+                const nome = voz.name.toLowerCase();
+                const lang = voz.lang.replace('_', '-').toLowerCase();
 
-            if (vozFeminina) {
-                utterance.voice = vozFeminina;
-                console.log('[painel-voz] Voz selecionada:', vozFeminina.name);
+                const ePtBr = lang.includes('pt-br') || lang.includes('pt');
+
+                return ePtBr && (
+                    nome.includes('rudolph') ||
+                    nome.includes('francisca') ||
+                    nome.includes('daniel') ||
+                    nome.includes('maria') ||
+                    nome.includes('female')
+                );
+            });
+
+            if (vozSelecionada) {
+                utterance.voice = vozSelecionada;
+                console.log('[painel-voz] Voz selecionada:', vozSelecionada.name);
             } else {
-                console.warn('[painel-voz] Nenhuma voz feminina encontrada.');
+                console.warn('[painel-voz] Nenhuma voz específica encontrada. Usando padrão do sistema.');
             }
 
             window.speechSynthesis.cancel();
