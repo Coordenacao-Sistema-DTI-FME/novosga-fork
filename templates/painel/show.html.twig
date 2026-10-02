@@ -40,7 +40,7 @@
                         :key="t.id"
                         class="history-item"
                         :class="{ priority: (t.peso || 0) > 0 }"
-                        :style="{ '--history-item-color': t.corPrioridade || '#000' }">
+                        :style="{ '--history-item-color': t.corPrioridade || '#012759' }">
                             <div class="hi-ticket" v-text="t.senha"></div>
                             <div class="hi-desk" v-text="t.local + ' ' + padNum(t.numeroLocal, 2)"></div>
                         {# <div class="hi-service" v-text="t.servico ? t.servico.nome : ''"></div> #}

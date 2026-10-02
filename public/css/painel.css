@@ -245,26 +245,21 @@ body {
 
 .history-item {
     position: relative;
-
     padding: .65rem .85rem;
-
     border-radius: 0 3px 3px 0;
-
     opacity: .6;
     transition: opacity .3s;
-
     animation: slide-in .35s cubic-bezier(.22, 1, .36, 1) both;
 }
 
 .history-item::before {
     content: '';
-
     position: absolute;
     left: 0;
     top: 10%;
     bottom: 10%;
     width: 4px;
-    background: var(--blue);
+    background: var(--history-item-color);
     border-radius: 0 3px 3px 0;
 }
 
@@ -275,13 +270,13 @@ body {
     to   { opacity: inherit; transform: none; }
 }
 
-.history-item { border-left-color: var(--history-item-color); }
+/* .history-item { border-left-color: var(--history-item-color); } */
 
 .hi-ticket {
     font-family: var(--font-display);
     font-size: 5vh;
     line-height: 1;
-    color: var(--blue);
+    color: var(--history-item-color);
     letter-spacing: .04em;
 }
 
