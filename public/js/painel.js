@@ -6,7 +6,7 @@
     const SSE_MAX_RETRIES = 3;
     const POLL_INTERVAL = 8000;
     const SSE_RETRY_FROM_POLL = 60000;
-    const MAX_HISTORY = 8;
+    const MAX_HISTORY = 5;
 
     let eventSource = null;
     let sseRetries = 0;
@@ -161,7 +161,9 @@
 
                 // VOZ
                 if (window.PainelVoz && this.featured) {
-                    window.PainelVoz.falarChamada(this.featured);
+                    setTimeout(() => {
+                        window.PainelVoz.falarChamada(this.featured);
+                    }, 500);
                 }
             },
 

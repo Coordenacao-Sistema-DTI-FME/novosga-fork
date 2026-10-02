@@ -30,9 +30,9 @@
             const utterance = new SpeechSynthesisUtterance(texto);
 
             utterance.lang = 'pt-BR';
-            utterance.rate = 0.8;
+            utterance.rate = 0.72;
             utterance.pitch = 1;
-            utterance.volume = 2;
+            utterance.volume = 1;
 
             window.speechSynthesis.cancel();
             window.speechSynthesis.speak(utterance);
