@@ -34,6 +34,19 @@
             utterance.pitch = 1;
             utterance.volume = 1;
 
+            const vozes = window.speechSynthesis.getVoices();
+
+            const vozDaniel = vozes.find(
+                voz => voz.name.includes('Daniel') && voz.lang === 'pt-BR'
+            );
+
+            if (vozDaniel) {
+                utterance.voice = vozDaniel;
+                console.log('[painel-voz] Usando voz:', vozDaniel.name);
+            } else {
+                console.warn('[painel-voz] Voz Daniel não encontrada');
+            }
+
             window.speechSynthesis.cancel();
             window.speechSynthesis.speak(utterance);
         },
