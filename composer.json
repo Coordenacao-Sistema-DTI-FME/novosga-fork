@@ -30,11 +30,7 @@
         },
         {
             "type": "vcs",
-            "url": "https://github.com/Coordenacao-Sistema-DTI-FME/panel-bundle-sga.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/Coordenacao-Sistema-DTI-FME/panel-app-sga.git"
+            "url": "https://github.com/Coordenacao-Sistema-DTI-FME/triage-bundle-sga.git"
         }
     ],
     "require": {
