@@ -260,6 +260,7 @@ body {
     background-color: var(--bg-footer);
     border-top: 1px solid rgba(255, 255, 255, .15);
     z-index: 1000;
+    border-top: 2px solid var(--text-dim);
 }
 
 #clock-time {
@@ -302,6 +303,7 @@ body {
     justify-content: space-between;
     padding: 1rem 2rem;
     background-color: var(--bg-footer);
+    border-top: 2px solid var(--text-dim);
 }
 
 #history {
