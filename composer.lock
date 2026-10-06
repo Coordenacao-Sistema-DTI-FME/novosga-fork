@@ -2126,12 +2126,12 @@
             "version": "v2.4.x-dev",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Coordenacao-Sistema-DTI-FME/panel-bundle-sga.git",
+                "url": "https://github.com/novosga/panel-bundle.git",
                 "reference": "df38ddf79042ac12c66930c4f8fe522e134ab166"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Coordenacao-Sistema-DTI-FME/panel-bundle-sga/zipball/df38ddf79042ac12c66930c4f8fe522e134ab166",
+                "url": "https://api.github.com/repos/novosga/panel-bundle/zipball/df38ddf79042ac12c66930c4f8fe522e134ab166",
                 "reference": "df38ddf79042ac12c66930c4f8fe522e134ab166",
                 "shasum": ""
             },
@@ -2164,16 +2164,13 @@
                     "Novosga\\PanelBundle\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Novosga\\PanelBundle\\Tests\\": "tests/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "support": {
-                "source": "https://github.com/Coordenacao-Sistema-DTI-FME/panel-bundle-sga/tree/v2.4"
+                "issues": "https://github.com/novosga/panel-bundle/issues",
+                "source": "https://github.com/novosga/panel-bundle/tree/v2.4"
             },
             "time": "2026-08-21T14:08:20+00:00"
         },
@@ -2340,12 +2337,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Coordenacao-Sistema-DTI-FME/triage-bundle-sga.git",
-                "reference": "1f4f20567da361cf0551de388c6c149e0a745c60"
+                "reference": "4cb31acd34152f8eb8470031676c1dd1945959ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Coordenacao-Sistema-DTI-FME/triage-bundle-sga/zipball/1f4f20567da361cf0551de388c6c149e0a745c60",
-                "reference": "1f4f20567da361cf0551de388c6c149e0a745c60",
+                "url": "https://api.github.com/repos/Coordenacao-Sistema-DTI-FME/triage-bundle-sga/zipball/4cb31acd34152f8eb8470031676c1dd1945959ec",
+                "reference": "4cb31acd34152f8eb8470031676c1dd1945959ec",
                 "shasum": ""
             },
             "require": {
@@ -2385,7 +2382,7 @@
             "support": {
                 "source": "https://github.com/Coordenacao-Sistema-DTI-FME/triage-bundle-sga/tree/v2.4"
             },
-            "time": "2026-08-21T14:07:53+00:00"
+            "time": "2026-10-06T19:53:14+00:00"
         },
         {
             "name": "novosga/users-bundle",
