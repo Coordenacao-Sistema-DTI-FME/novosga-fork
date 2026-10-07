@@ -204,7 +204,7 @@ body {
 .featured-subtitle {
     font-family: var(--font-ui);
 
-    font-size: 5.15vh !important;
+    font-size: 5.25vh !important;
     font-weight: 600;
 
     letter-spacing: .15em;
@@ -328,10 +328,11 @@ body {
 
 .history-item {
     position: relative;
-    padding: .65rem .95rem;
+    padding: .65rem .75rem;
     border-radius: 0 3px 3px 0;
     opacity: .6;
     transition: opacity .3s;
+    background-color: var(--bg-sidebar);
     animation: slide-in .35s cubic-bezier(.22, 1, .36, 1) both;
 }
 
@@ -365,9 +366,9 @@ body {
 
 .hi-desk {
     font-family: var(--font-mono);
-    font-size: 2.62vh;
+    font-size: 2.55vh;
     color: #1b1b1b;
-    margin-top: .2rem;
+    margin-top: .15rem;
     letter-spacing: .08em;
 }
 
@@ -383,7 +384,7 @@ body {
 
 #history-empty {
     font-family: var(--font-mono);
-    font-size: .7rem;
+    font-size: 1rem;
     color: var(--text-dim);
     font-style: italic;
     text-align: center;
