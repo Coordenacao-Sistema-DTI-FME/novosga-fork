@@ -204,7 +204,7 @@ body {
 .featured-subtitle {
     font-family: var(--font-ui);
 
-    font-size: 5.2vh !important;
+    font-size: 5.15vh !important;
     font-weight: 600;
 
     letter-spacing: .15em;
@@ -242,7 +242,7 @@ body {
     justify-content: center;
 
     font-family: var(--font-mono);
-    font-size: 1rem;
+    font-size: 2rem;
 
     color: #344054;
 }
@@ -365,7 +365,7 @@ body {
 
 .hi-desk {
     font-family: var(--font-mono);
-    font-size: 2.65vh;
+    font-size: 2.62vh;
     color: #1b1b1b;
     margin-top: .2rem;
     letter-spacing: .08em;
