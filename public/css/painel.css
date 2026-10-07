@@ -204,7 +204,7 @@ body {
 .featured-subtitle {
     font-family: var(--font-ui);
 
-    font-size: 4.9vh !important;
+    font-size: 5.2vh !important;
     font-weight: 600;
 
     letter-spacing: .15em;
@@ -227,7 +227,7 @@ body {
 
     color: #344054;
 
-    margin-top: .7rem;
+    margin-top: .65rem;
 
     min-height: 1.2em;
     text-shadow: 0 4px 0 rgba(0, 0, 0, .05);
@@ -328,7 +328,7 @@ body {
 
 .history-item {
     position: relative;
-    padding: .65rem .85rem;
+    padding: .65rem .95rem;
     border-radius: 0 3px 3px 0;
     opacity: .6;
     transition: opacity .3s;
@@ -365,8 +365,8 @@ body {
 
 .hi-desk {
     font-family: var(--font-mono);
-    font-size: 2.5vh;
-    color: #333333;
+    font-size: 2.65vh;
+    color: #1b1b1b;
     margin-top: .2rem;
     letter-spacing: .08em;
 }
