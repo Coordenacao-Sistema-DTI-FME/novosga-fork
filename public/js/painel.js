@@ -6,7 +6,7 @@
     const SSE_MAX_RETRIES = 3;
     const POLL_INTERVAL = 8000;
     const SSE_RETRY_FROM_POLL = 60000;
-    const MAX_HISTORY = 6;
+    const MAX_HISTORY = 5;
 
     let eventSource = null;
     let sseRetries = 0;
@@ -21,7 +21,7 @@
             initialized: false,
             isFlash: false,
             ticketEnter: false,
-            clockTime: '00:00:00',
+            clockTime: '00:00',
             clockDate: '',
         },
 
@@ -51,9 +51,9 @@
             updateClock() {
                 var now = new Date();
                 var p = (n) => { return String(n).padStart(2, '0'); };
-                this.clockTime = p(now.getHours()) + ':' + p(now.getMinutes()) + ':' + p(now.getSeconds());
+                this.clockTime = p(now.getHours()) + ':' + p(now.getMinutes());
                 this.clockDate = now.toLocaleDateString('pt-BR', {
-                    weekday: 'long', day: '2-digit', month: 'long', year: 'numeric',
+                    weekday: 'long', day: '2-digit', month: 'short',
                 });
             },
 
