@@ -105,7 +105,7 @@ body {
 
 /* ── Sidebar ───────────────────────────────────────────────── */
 #sidebar {
-    width: 25vw;
+    width: 30vw;
     height: 100vh;
 
     display: flex;
@@ -175,22 +175,22 @@ body {
 /* "SENHA CHAMADA" */
 #featured-label {
     font-family: var(--font-mono);
-    font-size: 3.1vh;
+    font-size: 3.65vh;
 
     letter-spacing: .30em;
     text-transform: uppercase;
 
     color: #344054;
 
-    margin-bottom: .75rem;
+    margin-bottom: 1.6rem;
 }
 
 /* Número da senha */
 #featured-title {
     font-family: var(--font-display);
 
-    font-size: 15.2vh;
-    line-height: .85;
+    font-size: 17.2vh;
+    line-height: .8;
 
     color: var(--featured-color);
 
@@ -204,30 +204,26 @@ body {
 .featured-subtitle {
     font-family: var(--font-ui);
 
-    font-size: 6.45vh !important;
+    font-size: 7ch !important;
     font-weight: 600;
 
-    letter-spacing: .15em;
+    letter-spacing: .1em;
     text-transform: uppercase;
     text-shadow: 0 4px 0 rgba(0, 0, 0, .05);
 
     color: #111;
-
-    margin-top: .85rem;
 }
 
 /* Prioridade */
 #featured-description {
     font-family: var(--font-mono);
 
-    font-size: 2.3vh;
+    font-size: 3.3vh;
 
     letter-spacing: .25em;
     text-transform: uppercase;
 
     color: #344054;
-
-    margin-top: .65rem;
 
     min-height: 1.2em;
     text-shadow: 0 4px 0 rgba(0, 0, 0, .05);
