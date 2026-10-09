@@ -314,7 +314,7 @@ body {
 #history::-webkit-scrollbar { display: none; }
 
 #history-heading {
-    width: 17%;
+    width: 20%;
     font-family: var(--font-mono);
     font-size: 3.65vh;
     letter-spacing: .1em;
@@ -330,7 +330,7 @@ body {
     opacity: .6;
     transition: opacity .3s;
     animation: slide-in .35s cubic-bezier(.22, 1, .36, 1) both;
-    width: 11.8rem;
+    width: 14rem;
 }
 
 .history-item::before {
