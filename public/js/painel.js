@@ -6,7 +6,7 @@
     const SSE_MAX_RETRIES = 3;
     const POLL_INTERVAL = 8000;
     const SSE_RETRY_FROM_POLL = 60000;
-    const MAX_HISTORY = 5;
+    const MAX_HISTORY = 4;
 
     let eventSource = null;
     let sseRetries = 0;
