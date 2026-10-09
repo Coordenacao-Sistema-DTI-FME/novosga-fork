@@ -110,6 +110,7 @@ body {
 
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 
     /* background:
         radial-gradient(
@@ -131,7 +132,7 @@ body {
 #sidebar img {
     display: block;
     width: 85%;
-    max-width: 280px;
+    max-width: 310px;
     height: auto;
 
     margin: 1.5rem auto .5rem;
@@ -189,7 +190,7 @@ body {
 #featured-title {
     font-family: var(--font-display);
 
-    font-size: 17.2vh;
+    font-size: 18.5vh;
     line-height: .8;
 
     color: var(--featured-color);
@@ -218,9 +219,9 @@ body {
 #featured-description {
     font-family: var(--font-mono);
 
-    font-size: 3.3vh;
+    font-size: 4.1vh;
 
-    letter-spacing: .25em;
+    letter-spacing: .15em;
     text-transform: uppercase;
 
     color: #344054;
@@ -249,7 +250,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 15vh;
+    min-height: 18vh;
     padding: .75rem;
     text-align: center;
     background: rgba(0, 0, 0, .12);
@@ -257,6 +258,7 @@ body {
     border-top: 1px solid rgba(255, 255, 255, .15);
     z-index: 1000;
     border-top: 2px solid var(--text-dim);
+    width: 100%;
 }
 
 #clock-time {
@@ -274,13 +276,13 @@ body {
 #clock-date {
     font-family: var(--font-mono);
 
-    font-size: 2.1vh;
+    font-size: 2.35vh;
 
     letter-spacing: .18em;
 
     text-transform: uppercase;
 
-    color: rgba(0, 0, 0, .65);
+    color: rgba(0, 0, 0, 0.925);
 
     margin-top: .2rem;
 }
@@ -293,7 +295,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 15vh;
+    height: 18vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -304,20 +306,20 @@ body {
 #history {
     flex: 1;
     overflow-y: auto;
-    padding: .5rem .35rem;
+    padding: .5rem 1.15rem;
     scrollbar-width: none;
     display: flex;
     align-items: center;
-    gap: .85rem;
 }
 #history::-webkit-scrollbar { display: none; }
 
 #history-heading {
+    width: 17%;
     font-family: var(--font-mono);
-    font-size: 3vh;
-    letter-spacing: .3em;
+    font-size: 3.65vh;
+    letter-spacing: .1em;
     text-transform: uppercase;
-    font-weight: 800;
+    font-weight: bold;
     color: var(--text-black);
 }
 
@@ -328,6 +330,7 @@ body {
     opacity: .6;
     transition: opacity .3s;
     animation: slide-in .35s cubic-bezier(.22, 1, .36, 1) both;
+    width: 11.8rem;
 }
 
 .history-item::before {
@@ -352,7 +355,7 @@ body {
 
 .hi-ticket {
     font-family: var(--font-display);
-    font-size: 5vh;
+    font-size: 6.8vh;
     line-height: 1;
     color: var(--history-item-color);
     letter-spacing: .04em;
@@ -360,7 +363,7 @@ body {
 
 .hi-desk {
     font-family: var(--font-mono);
-    font-size: 2.31vh;
+    font-size: 3.32vh;
     color: #1b1b1b;
     font-weight: 600;
     letter-spacing: .08em;
