@@ -378,10 +378,9 @@ body {
 
 #history-empty {
     font-family: var(--font-mono);
-    font-size: 1rem;
+    font-size: 1.35rem;
     color: var(--text-dim);
     font-style: italic;
     text-align: center;
-    margin-top: 2rem;
 }
 
