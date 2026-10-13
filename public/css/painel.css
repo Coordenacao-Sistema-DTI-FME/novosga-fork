@@ -132,7 +132,7 @@ body {
 #sidebar img {
     display: block;
     width: 85%;
-    max-width: 310px;
+    max-width: 335px;
     height: auto;
 
     margin: 1.5rem auto .5rem;
@@ -330,7 +330,7 @@ body {
     opacity: .6;
     transition: opacity .3s;
     animation: slide-in .35s cubic-bezier(.22, 1, .36, 1) both;
-    width: 14rem;
+    width: 16rem;
 }
 
 .history-item::before {
