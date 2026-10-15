@@ -1913,12 +1913,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Coordenacao-Sistema-DTI-FME/attendance-bundle-sga.git",
-                "reference": "05e0f556b1bc37eb5589df1a88b5fa5f4f93aeab"
+                "reference": "eec93f5d4aea869a0c691d6092ae1928647ab87f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Coordenacao-Sistema-DTI-FME/attendance-bundle-sga/zipball/05e0f556b1bc37eb5589df1a88b5fa5f4f93aeab",
-                "reference": "05e0f556b1bc37eb5589df1a88b5fa5f4f93aeab",
+                "url": "https://api.github.com/repos/Coordenacao-Sistema-DTI-FME/attendance-bundle-sga/zipball/eec93f5d4aea869a0c691d6092ae1928647ab87f",
+                "reference": "eec93f5d4aea869a0c691d6092ae1928647ab87f",
                 "shasum": ""
             },
             "require": {
@@ -1959,7 +1959,7 @@
             "support": {
                 "source": "https://github.com/Coordenacao-Sistema-DTI-FME/attendance-bundle-sga/tree/v2.4"
             },
-            "time": "2026-09-30T14:17:18+00:00"
+            "time": "2026-10-14T17:30:17+00:00"
         },
         {
             "name": "novosga/core",
@@ -2022,12 +2022,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Coordenacao-Sistema-DTI-FME/customers-bundle-sga.git",
-                "reference": "c52e6ee91d073385cf137e12abf169f2b9790737"
+                "reference": "d284802f76e6cbbdcf1de401ed83107fd07bf552"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Coordenacao-Sistema-DTI-FME/customers-bundle-sga/zipball/c52e6ee91d073385cf137e12abf169f2b9790737",
-                "reference": "c52e6ee91d073385cf137e12abf169f2b9790737",
+                "url": "https://api.github.com/repos/Coordenacao-Sistema-DTI-FME/customers-bundle-sga/zipball/d284802f76e6cbbdcf1de401ed83107fd07bf552",
+                "reference": "d284802f76e6cbbdcf1de401ed83107fd07bf552",
                 "shasum": ""
             },
             "require": {
@@ -2069,7 +2069,7 @@
             "support": {
                 "source": "https://github.com/Coordenacao-Sistema-DTI-FME/customers-bundle-sga/tree/v2.4"
             },
-            "time": "2026-10-09T17:55:23+00:00"
+            "time": "2026-10-14T14:49:38+00:00"
         },
         {
             "name": "novosga/monitor-bundle",
