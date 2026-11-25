@@ -1,25 +1,50 @@
-version: '3'
 
 services:
-###> doctrine/doctrine-bundle ###
+  ### PostgreSQL atual do Novo SGA ###
   database:
     ports:
-      - "5432"
-###< doctrine/doctrine-bundle ###
+      - "5432:5432"
 
-###> symfony/mailer ###
+  ### Mailpit ###
   mailer:
     image: axllent/mailpit
     ports:
-      - "1025"
-      - "8025"
+      - "1025:1025"
+      - "8025:8025"
     environment:
       MP_SMTP_AUTH_ACCEPT_ANY: 1
       MP_SMTP_AUTH_ALLOW_INSECURE: 1
-###< symfony/mailer ###
 
-###> symfony/mercure-bundle ###
+  ### Mercure ###
   mercure:
     ports:
       - "3000:3000"
-###< symfony/mercure-bundle ###
+
+  ### MySQL adicional ###
+  mysql:
+    image: mysql:8.4
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: "TroqueEstaSenha123!"
+      MYSQL_DATABASE: "meubanco"
+      MYSQL_USER: "admin"
+      MYSQL_PASSWORD: "TroqueEstaOutraSenha123!"
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  ### Interface web para PostgreSQL ###
+  phpmyadmin:
+    image: phpmyadmin:latest
+    restart: unless-stopped
+    depends_on:
+      - mysql
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+    ports:
+      - "8083:80"
+
+volumes:
+  mysql_data:

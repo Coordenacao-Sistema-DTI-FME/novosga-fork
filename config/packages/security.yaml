@@ -36,6 +36,10 @@ security:
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#the-firewall
 
+            login_throttling:
+                max_attempts: 3
+                interval: '5 minutes'
+
             # https://symfony.com/doc/current/security/impersonating_user.html
             # switch_user: true
             logout:

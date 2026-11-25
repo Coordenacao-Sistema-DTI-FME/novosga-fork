@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "78728c9266237006ff2dac055ea622af",
+    "content-hash": "0a09e490feceb34d48b6f51224649808",
     "packages": [
         {
             "name": "defuse/php-encryption",
@@ -2077,12 +2077,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Coordenacao-Sistema-DTI-FME/monitor-bundle-sga.git",
-                "reference": "d992bc07bc91d5f49407f294afbb5d9b2616f799"
+                "reference": "096ce774631ecdadac8383b735185c1f2197e19d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Coordenacao-Sistema-DTI-FME/monitor-bundle-sga/zipball/d992bc07bc91d5f49407f294afbb5d9b2616f799",
-                "reference": "d992bc07bc91d5f49407f294afbb5d9b2616f799",
+                "url": "https://api.github.com/repos/Coordenacao-Sistema-DTI-FME/monitor-bundle-sga/zipball/096ce774631ecdadac8383b735185c1f2197e19d",
+                "reference": "096ce774631ecdadac8383b735185c1f2197e19d",
                 "shasum": ""
             },
             "require": {
@@ -2123,7 +2123,7 @@
             "support": {
                 "source": "https://github.com/Coordenacao-Sistema-DTI-FME/monitor-bundle-sga/tree/v2.4"
             },
-            "time": "2026-09-29T18:22:21+00:00"
+            "time": "2026-11-24T19:23:02+00:00"
         },
         {
             "name": "novosga/panel-bundle",
@@ -2184,12 +2184,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Coordenacao-Sistema-DTI-FME/reports-bundle-sga.git",
-                "reference": "9d526d98f35373ce207c50d44d58d505db5adb7a"
+                "reference": "a53319d42818918f9fc12e103bd38ceaba67f80b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Coordenacao-Sistema-DTI-FME/reports-bundle-sga/zipball/9d526d98f35373ce207c50d44d58d505db5adb7a",
-                "reference": "9d526d98f35373ce207c50d44d58d505db5adb7a",
+                "url": "https://api.github.com/repos/Coordenacao-Sistema-DTI-FME/reports-bundle-sga/zipball/a53319d42818918f9fc12e103bd38ceaba67f80b",
+                "reference": "a53319d42818918f9fc12e103bd38ceaba67f80b",
                 "shasum": ""
             },
             "require": {
@@ -2232,7 +2232,7 @@
             "support": {
                 "source": "https://github.com/Coordenacao-Sistema-DTI-FME/reports-bundle-sga/tree/v2.4"
             },
-            "time": "2026-10-09T18:32:23+00:00"
+            "time": "2026-11-24T19:50:59+00:00"
         },
         {
             "name": "novosga/scheduling-bundle",
@@ -7570,6 +7570,80 @@
                 }
             ],
             "time": "2026-03-24T13:12:05+00:00"
+        },
+        {
+            "name": "symfony/rate-limiter",
+            "version": "v7.4.24",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/rate-limiter.git",
+                "reference": "363f4fe1491bb2757405f4ad555457298e84c1dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/rate-limiter/zipball/363f4fe1491bb2757405f4ad555457298e84c1dd",
+                "reference": "363f4fe1491bb2757405f4ad555457298e84c1dd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2",
+                "symfony/options-resolver": "^7.3|^8.0"
+            },
+            "require-dev": {
+                "psr/cache": "^1.0|^2.0|^3.0",
+                "symfony/lock": "^6.4|^7.0|^8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\RateLimiter\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Wouter de Jong",
+                    "email": "wouter@wouterj.nl"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides a Token Bucket implementation to rate limit input and output in your application",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "limiter",
+                "rate-limiter"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/rate-limiter/tree/v7.4.24"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2026-11-10T01:07:41+00:00"
         },
         {
             "name": "symfony/routing",
